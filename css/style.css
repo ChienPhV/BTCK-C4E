@@ -12,11 +12,14 @@ html{
 }
 /*set all element to center*/
 /* Destop 1: index, login */
-.Destop{
-    position: absolute;
-    top: 10%;
-    left: 35%;
-}
+body {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+  }
 .logo{
     text-align: center;
     margin-top: 5px;
