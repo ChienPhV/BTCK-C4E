@@ -27,18 +27,7 @@ body {
 .logo:hover{
     transform: translateY(10px);
 }
-h1{
-    font-family: 'Roboto Slab', serif;
-    color: white;
-    font-style: bold;
-    font-size: 64px;
-    text-align: center;
-    margin: auto;
 
-}
-h1:hover{
-    color: #b78cf5;
-}
 .logBox{
     border: 3px solid #FFA0A0;
     border-radius: 10px;
