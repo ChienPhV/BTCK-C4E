@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
+
 <body>
     <div class="Destop">
         <div class="logo">
@@ -22,22 +23,40 @@
         </div>
         <div class="logBox">
             <h2>SIGN UP</h2>
+            <form onsubmit="sigup()">
             <div for="email"><b>Email</b></div>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input id="email" type="text" placeholder="Enter Email" name="email" required>
 
             <div for="psw"><b>Password</b></div>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
             <div for="psw"><b>Repeat Password</b></div>
-            <input type="password" placeholder="Repeat Password" name="psw" required>
+            <input id="repassword" type="password" placeholder="Repeat Password" name="psw" required>s
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
             <div class="clearfix">
                 <button type="button" class="cancelBtn"><a href="./index.html">Cancel</a></button>
-                <button type="submit" class="signupBtn"><a href="./index.html">Sign Up</a></button>
+                <button  name="btnsubmit" type="submit" class="signupBtn">Sign Up</button>
             </div>
+        </form>
         </div>
-
+        <script>
+            function sigup(e) {
+                event.preventDefault();
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var repassword = document.getElementById("repassword").value;
+            var user = {
+                email :email,
+                password :password,
+                repassword:repassword,
+            }
+            var json = JSON.stringify(user);
+            localStorage.setItem(email,json);
+            alert("dang ky thanh cong");
+            window.location.href="index.html"
+        }
+            </script>
 </body>
 </html>
 

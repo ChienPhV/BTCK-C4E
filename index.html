@@ -22,18 +22,20 @@
         </div>
         <div class="logBox">
             <h2>LOG IN</h2>
+        <form action="" onsubmit="login()" method="post">
             <div for="email"><b>Email</b></div>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input id="email"  type="text" placeholder="Enter Email" name="email" required>
             <div for="psw"><b>Password</b></div>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input id="password" type="password" placeholder="Enter Password" name="password" required>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
             <p><a href="./Destop3.html">Forgot password?</a></p>
             <div class="clearfix">
-                <button type="button" class="LoginBtn">Log In</button>
-                <button type="submit" class="signupBtn"><a href="./Destop2.html">Sign Up</a></button>
+                <button type="submit" class="LoginBtn">Log In</button>
+                <button  class="signupBtn"><a href="./Destop2.html">Sign Up</a></button>
             </div>
+        </form>
         </div>
         <div class="social-media">
 
@@ -43,6 +45,28 @@
             <ion-icon size="large"></ion-icon>
         </div>
     </div>
+    <script>
+        function login(e){
+            event.preventDefault();
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var user =localStorage.getItem(email)
+            var data = JSON.parse(user)
+            if(user == null){
+                alert("vui long nhap email password hoac ban da nhap sai")
+            }
+            else if (email == data.email && password == data.password )
+           { 
+            alert("dang nhap thanh cong")
+           window.location.href="index.html"
+            
+            }
+            else{
+                alert("dang nhap that bai")
+            }
+        }
+    
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
