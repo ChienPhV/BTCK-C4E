@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgb(57, 151, 251), rgb(94, 224, 244));
+    position: relative;
+}
+/*set all element to center*/
+/* Destop 1: index, login */
+body {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+  }
+.logo{
+    text-align: center;
+    margin-top: 5px;
+}
+.logo:hover{
+    transform: translateY(10px);
+}
+
+.logBox{
+    border: 3px solid #FFA0A0;
+    border-radius: 10px;
+    background-color: rgb(102, 229, 248);
+    padding: 8px 8px 8px 8px;
+    margin-top: 20px;
+ 
+}
+.logBox:hover{
+    border: 3px solid #6516d3;
+}
+h2{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    color: #26A5DE;
+    font-size: 32px;
+    
+}
+input[type=text] {
+    border: 2px solid #FFA0A0;
+    border-radius: 4px;
+    background-color: #FFA0A0;
+    width: 100%;
+    padding: 8px 10px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+input[type=password] {
+    border: 2px solid #FFA0A0;
+    border-radius: 4px;
+    background-color: #FFA0A0;
+    width: 100%;
+    padding: 8px 10px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+p{
+    padding-left: 60%;
+    font-family: 'Roboto Slab';
+    font-size: 13px;
+    font-weight: bold;
+    
+}
+a{
+    color: rgb(65, 65, 65); 
+    text-decoration: none;
+}
+
+a:hover{
+    color: white
+}
+b{
+    color: #26A5DE;
+    font-family: Roboto Slab; 
+    font-size: 13px;
+}
+.clearfix{
+    padding-left: 32%;
+    margin-top: 20px;
+}
+.LoginBtn{
+    text-decoration: none;
+    background-color: #fdb2b2;
+    color: rgb(22, 1, 1);
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    border: #fff;
+}
+.LoginBtn:hover{
+    background-color: rgb(228, 61, 203);
+    color: #fff;
+}
+.social-media{
+    
+    margin-left: 35%;
+    margin-top: 10px;
+}
+ion-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    color: white;
+}
+ion-icon:hover{
+    transform: translateY(4px);
+    color: gray;
+}
+/* Destop 2: sign up*/
+.signupBtn{
+    text-decoration: none;
+    background-color: #fdb2b2;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    border: #fff;
+}
+.signupBtn:hover{
+    background-color: rgb(228, 95, 168);
+    color: #fff;
+}
+.cancelBtn{
+    text-decoration: none;
+    background-color: #fc6767;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    border: #fff;
+}
+.cancelBtn:hover{
+    background-color: rgb(241, 13, 13);
+    color: #fff;
+}
+
