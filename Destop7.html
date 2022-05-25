@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/destop6.css" />
+    <link rel="stylesheet" href="./css/destop7.css" />
   </head>
   <body>
     <header>
@@ -55,45 +55,43 @@
     </header>
 
     <div class="content">
-      <div style="color: white" class="welcomeBack">
-        WELCOME BACK (USERNAME)
-      </div>
+      <div style="color: white" class="welcomeBack">(USERNAME)</div>
 
       <div class="profilePic"></div>
 
       <div class="logBox">
-        <h2>ABOUT YOU</h2>
+        <h2>CHANGE PASSWORD</h2>
         <form action="">
-          <div class="info" for="nickname"><b>Nickname</b></div>
+          <div class="info" for="oldPassword"><b>Old password</b></div>
           <input
-            id="nickname"
-            type="text"
-            placeholder="Enter your nickname"
-            name="nickname"
+            id="oldPassword"
+            type="password"
+            placeholder="Enter your old password"
+            name="oldPassword"
             required
           />
-          <div class="info" for="DOB"><b>DOB</b></div>
+          <div class="info" for="newPassword"><b>New password</b></div>
           <input
-            id="DOB"
-            type="text"
-            placeholder="Enter your DOB"
-            name="DOB"
+            id="newPassword"
+            type="password"
+            placeholder="Enter your new password"
+            name="newPassword"
             required
           />
-          <div class="info" for="catchphrase"><b>Catchphrase</b></div>
+          <div class="info" for="reenterNewPassword">
+            <b>Re-enter your new password</b>
+          </div>
           <input
-            id="catchphrase"
-            type="text"
-            placeholder="Enter your catchphrase"
-            name="catchphrase"
+            id="reenterNewPassword"
+            type="password"
+            placeholder="Re-enter your new password"
+            name="reenterNewPassword"
             required
           />
         </form>
       </div>
 
-      <button class="CreatCard">
-        <a href="./Destop7.html">Change password</a>
-      </button>
+      <button class="CreatCard"><a href="./Destop8.html">Submit</a></button>
     </div>
   </body>
 </html>
