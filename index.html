@@ -25,12 +25,13 @@
             <input id="email"  type="text" placeholder="Enter Email" name="email" required>
             <div for="psw"><b>Password</b></div>
             <input id="password" type="password" placeholder="Enter Password" name="password" required>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
+            <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+            
+            
+            
             <p><a href="./Destop3.html">Forgot password?</a></p>
             <div class="clearfix">
-                <button type="submit" class="LoginBtn">Log In</button>
+                <button type="submit" class="LoginBtn" value="Login" onclick="lsRememberMe()">Log In</button>
                 <button  class="signupBtn"><a href="./Destop2.html">Sign Up</a></button>
             </div>
         </form>
