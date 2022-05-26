@@ -1,16 +1,38 @@
-const image_input=document.querySelector("#image_input");
-// const hide_button=document.getElementById("image_input")
+//declearing html elements
 
-var uploaded_image="";
-image_input.addEventListener("change", function(){
-    
-    const reader=new FileReader();
-    reader.addEventListener("load", ()=>{
-        uploaded_image=reader.result;
-        document.querySelector("#display_image").style.backgroundImage=`url(${uploaded_image})`;
-        document.querySelector("#image_input").style.opacity=`0`;
-    })
-    reader.readAsDataURL(this.files[0]);  
-   
-})
+const imgDiv = document.querySelector('.profile-pic-div');
+const img = document.querySelector('#photo');
+const file = document.querySelector('#file');
+const uploadBtn = document.querySelector('#uploadBtn');
 
+//if user hover on img div 
+
+imgDiv.addEventListener('mouseenter', function(){
+    uploadBtn.style.display = "block";
+});
+
+//if we hover out from img div
+
+imgDiv.addEventListener('mouseleave', function(){
+    uploadBtn.style.display = "none";
+});
+
+
+//when we choose a photo to upload
+
+file.addEventListener('change', function(){
+    //this refers to file
+    const choosedFile = this.files[0];
+
+    if (choosedFile) {
+
+        const reader = new FileReader(); //FileReader is a predefined function of JS
+
+        reader.addEventListener('load', function(){
+            img.setAttribute('src', reader.result);
+        });
+
+        reader.readAsDataURL(choosedFile);
+
+    }
+});
