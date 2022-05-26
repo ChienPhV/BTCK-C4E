@@ -41,10 +41,6 @@ border-radius: 50%;
 margin-bottom: 70px;
 }
 
-.profilePic:hover{
-    border: 3px solid #6516d3;
-}
-
 
 .logBox{
     border: 2px solid #FFA0A0;
