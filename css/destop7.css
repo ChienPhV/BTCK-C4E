@@ -29,7 +29,7 @@ body {
     margin-top: 50px;
 }
 
-.profilePic{
+#profilePic{
 box-sizing: border-box;
 width: 204px;
 height: 204px;

@@ -4,6 +4,7 @@ const imgDiv = document.querySelector('.profile-pic-div');
 const img = document.querySelector('#photo');
 const file = document.querySelector('#file');
 const uploadBtn = document.querySelector('#uploadBtn');
+const x=document.querySelector("profilePic");
 
 //if user hover on img div 
 
@@ -33,6 +34,10 @@ file.addEventListener('change', function(){
         });
 
         reader.readAsDataURL(choosedFile);
+        x=reader.readAsDataURL(choosedFile);
 
     }
 });
+
+
+
