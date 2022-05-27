@@ -49,17 +49,17 @@ function textareaResize(e) {
   });
 
 
-// var btn = document.querySelector("#btn")
-// btn.onclick = function(){
-//     var div = document.createElement("div")
-//     div.innerHTML = generateIt()
-//     document.getElementById("box").appendChild(div)
-// }
+var btn = document.querySelector("#btn")
+btn.onclick = function(){
+    var div = document.createElement("div")
+    div.innerHTML = generateIt()
+    document.getElementById("scLink").appendChild(div)
+}
 
-// function generateIt() {
-//     return "<input type ='text'><button onclick='removeIt(this)'>Remove</button>"
-// }
+function generateIt() {
+    return "<input type ='url'><button onclick='removeIt(this)'>Remove</button>"
+}
 
-// function removeIt(btn){
-// document.getElementById("box").removeChild(btn.parentNode)
-// }
+function removeIt(btn){
+document.getElementById("box").removeChild(btn.parentNode)
+}
