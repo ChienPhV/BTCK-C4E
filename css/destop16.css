@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgb(57, 151, 251), rgb(94, 224, 244));
+}
+body {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    
+}
+
+
+
+h1{text-align: center;}
+b{color: #26A5DE !important;}
+
+
+
+
+
+header{
+    position: fixed;
+    background-color: #FFA0A0;
+    width: 100%;   
+}
+header img{
+    cursor: pointer;
+}
+.topnav{
+    float: right;
+    padding-right: 15px;
+}
+.topnav a {
+    float: left;
+    padding: 10px 20px;
+}
+  
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+a{
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    line-height: 21px;
+    text-decoration: none;
+}
+
+.welcomeBack{
+    font-size: 36px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+}
+.content
+{
+    display: grid;
+    padding: 150px;
+    justify-items: center;
+    align-items: center;
+}
+.avt-user{
+    padding-top: 15px ;
+}
+
+.in4-user {
+    margin: 50px;
+    padding: 10px;
+    border: 2px solid #ffa0a0;
+    border-radius: 10px;
+    width: 708px;
+    height: 339px;
+    background-color: #a9e5fb;
+
+}
+
+
+.info{
+    color: #26A5DE;
+    line-height: 20px;
+}
+
+b{
+    color: #fff;
+    text-align: end;
+}
+.about-them {
+    display: flex;
+    padding: 18px;
+    width: 100px;
+}
+.input about-them{
+    border: 2px solid #FFA0A0;
+    border-radius: 7px;
+    background-color: #FFA0A0;
+    width: 441px;
+    height: 25px;
+    box-sizing: border-box;
+}
+.about-them123{
+    display: flex;
+    padding: 22px;
+}
+input.input.about-them {
+    width: 441px;
+    height: 25px;
+    background-color: #ffa0a0;
+    border-radius: 13px;
+}
+
+p.text.about-them {
+    justify-content:center;
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    color: #0595E8;
+    font-size: 14px;
+}
+.CreatCard{
+    text-decoration: none;
+    width: 233px;
+height: 29px;
+left: 603px;
+top: 911px;
+    background-color: #109dde;
+    color: #fff;
+    border-radius: 15px;
+    border: solid 1px #FFA0A0;
+    display: inline-block;
+    cursor: pointer;
+}
+.CreatCard:hover{
+    background-color: rgb(207, 143, 212);
+    color: rgb(34, 7, 104);
+}
+
+
