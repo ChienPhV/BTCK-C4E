@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Destop19</title>
+		<script type="text/javascript" src="./js/qrcode.min.js"></script>
+		<script type="text/javascript">
+		function onReady()
+		{
+			var qrcode = new QRCode("id_qrcode", {
+				text:"file:///D:/CHIEN%20PV/Mindx/C4E/BTCK/Destop9.html",
+				width:300,
+				height:300,
+				colorDark:"#000000",
+				colorLight:"#ffffff",
+				correctLevel:QRCode.CorrectLevel.H
+			});
+		}
+		</script>
+		<style>
+			body{
+				display: grid;
+				text-align: center;
+				align-items: center;
+				/* position: relative; */
+			}
+			#div{
+				position: absolute;
+				margin-top: 460px;
+				margin-left: 37%;
+				
+			}
+			#id_qrcode{
+				border: 5px solid #4449ea;
+			}
+		</style>
+	</head>
+	<body onload=onReady()>
+		<div id="div">
+			<h1>Your QR Code:</h1>
+			<p>
+				<div id="id_qrcode"></div>
+			</p>
+		</div>
+	</body>
+</html>

@@ -34,6 +34,8 @@ body {
     background-color: rgb(102, 229, 248);
     padding: 8px 8px 8px 8px;
     margin-top: 20px;
+    width: 510px;
+    /* height: 470px; */
  
 }
 .logBox:hover{
@@ -143,4 +145,5 @@ ion-icon:hover{
     background-color: rgb(241, 13, 13);
     color: #fff;
 }
+
 
