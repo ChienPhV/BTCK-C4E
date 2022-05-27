@@ -39,25 +39,27 @@ file.addEventListener('change', function(){
     }
 });
 
-function textareaResize(e) {
-    $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
-  }
-  $('textarea').each(function () {
-    textareaResize(this);
-  }).on('input', function () {
-    textareaResize(this);
-  });
+const tx = document.getElementsByTagName("textarea");
+for (let i = 0; i < tx.length; i++) {
+  tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+  tx[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = "auto";
+  this.style.height = (this.scrollHeight) + "px";
+}
 
 
 var btn = document.querySelector("#btn")
 btn.onclick = function(){
     var div = document.createElement("div")
     div.innerHTML = generateIt()
-    document.getElementById("scLink").appendChild(div)
+    document.getElementById("box").appendChild(div)
 }
 
 function generateIt() {
-    return "<input type ='url'><button onclick='removeIt(this)'>Remove</button>"
+    return "<input id='enter' type ='url'><button id='clear' class='remove' onclick='removeIt(this)'>Remove</button>"
 }
 
 function removeIt(btn){

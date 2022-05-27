@@ -52,6 +52,7 @@ h2 {
     text-align: center;
     color: whitesmoke;
     font-size: 36px;
+    margin-bottom: 50px;
 }
 
 #content {
@@ -157,7 +158,8 @@ textarea{
 }
 #box{
     width: 98%;
-    
+    display: grid;
+    position: relative;
     text-align: center;
     
 }
@@ -167,14 +169,30 @@ textarea{
     color: #26A5DE;
     font-size: 12px;
     border: none;
-    /* background: none; */
-    z-index: 10;
+    background: none;
 }
 
+.remove{
+    justify-content: end;
+    text-decoration: none;
+    color: #26A5DE;
+    font-size: 12px;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 2;
+    top: 2px;
+    height: 30px;
+    cursor: pointer;
+    transform: translateX(2px);
+}
 
 
 .CreatCard {
     /* position: absolute; */
+    margin-top: 110%;
     margin: auto;
     bottom: 10%;
     text-decoration: none;
