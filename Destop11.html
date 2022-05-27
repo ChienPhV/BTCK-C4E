@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create new card</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/destop7.css" />
+    <link rel="stylesheet" href="./css/destop11.css" />
   </head>
   <body>
     <header>
@@ -53,5 +58,36 @@
         /></a>
       </div>
     </header>
+
+    <h2>Create new card</h2>
+
+    <div id="content" class="logBox">
+      <div class="profile-pic-div">
+        <img src="./Assets/image.jpg" id="photo" />
+        <input type="file" id="file" />
+        <label for="file" id="uploadBtn">Choose Photo</label>
+      </div>
+
+      <div class="slogan">
+        <textarea placeholder="About you/Slogan/Quote"></textarea>
+      </div>
+
+      <div id="scLink" class="link">
+        <input
+          type="text"
+          placeholder="Enter your Social Media link"
+          name="scLink"
+          required
+        />
+        <!-- <div id="box">
+          <button onclick="generateIt()" id="btn">Add another Link </button>
+        </div> -->
+    </div>
+  
+    <button class="CreatCard">
+      <a href="./Destop10.html">Create card</a>
+    </button>
+
+    <script src="./js/destop11.js"></script>
   </body>
 </html>
