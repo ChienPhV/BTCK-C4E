@@ -18,52 +18,53 @@
   </head>
 
   <body>
-    <form action="" >
-    <nav class="nav">
-      <img
-        src="./Assets/logo-Transparent.png"
-        alt="logo"
-        width="auto"
-        height="50px"
-      />
-      <span class="namecardTop">NAMECARD</span>
-    </nav>
-    <div class="content-destop3">
-      <div class="main-content-destop3">
-        <div class="destop3-text">Password Recovery</div>
-        <div class="email">Enter Your Email</div>
-        <input id="email"
-          type="recovery"
-          placeholder="Enter Email"
-          name="email"
-          required
-        />
-        <div class="clearfix">
-          <button  onclick="checkemail()" type="button" class="sendEmail">
-            <a href="#">SEND</a>
-          </button>
+    <form action="">
+      <nav class="nav">
+        <a href="./index.html">
+          <img
+            src="./Assets/logo-Transparent.png"
+            alt="logo"
+            width="auto"
+            height="50px"
+          />
+          <span class="namecardTop">NAMECARD</span>
+        </a>
+      </nav>
+      <div class="content-destop3">
+        <div class="main-content-destop3">
+          <div class="destop3-text">Password Recovery</div>
+          <div class="email">Enter Your Email</div>
+          <input
+            id="email"
+            type="recovery"
+            placeholder="Enter Email"
+            name="email"
+            required
+          />
+          <div class="clearfix">
+            <button onclick="checkemail()" type="button" class="sendEmail">
+              <a href="#">SEND</a>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
   </body>
 
-<script>
-      function checkemail(e) {
-        event.preventDefault();
-        let email = document.getElementById("email").value;
-        let user = localStorage.getItem(email);
-        let data = JSON.parse(user);
-        console.log(user)
-        if (user == null) {
-          alert("vui long nhap email password hoac ban da nhap sai");
-        }
-       if(data.email == email)
-       {
-         alert('chuan r ban oi');
-         window.location.href = "Destop4.html";
-       }
-
+  <script>
+    function checkemail(e) {
+      event.preventDefault();
+      let email = document.getElementById("email").value;
+      let user = localStorage.getItem(email);
+      let data = JSON.parse(user);
+      console.log(user);
+      if (user == null) {
+        alert("vui long nhap email password hoac ban da nhap sai");
+      }
+      if (data.email == email) {
+        alert("chuan r ban oi");
+        window.location.href = "Destop4.html";
+      }
     }
-</script>
+  </script>
 </html>
