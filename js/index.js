@@ -46,13 +46,10 @@ i#logo-nav {
             </div>
           </nav>
     </header>
-
     
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-
         `
      }
 
