@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Your cards</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <script type="text/javascript" src="./js/qrcode.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/destop16.css" />
+    <link rel="stylesheet" href="./css/destop9.css" />
   </head>
+
   <body>
     <header>
       <a href="./Destop6.html">
@@ -46,7 +54,7 @@
             width="auto"
             height="30px"
         /></a>
-        <a href="./Destop18.html"
+        <a href="#"
           ><img
             src="./Assets/Icon/qr-icon.png"
             alt="qr-icon"
@@ -56,32 +64,14 @@
       </div>
     </header>
     <div class="content">
-      <div style="color: white" class="welcomeBack">(USERNAME)</div>
-      <div class="avt-user">
-        <img
-          src="./Assets/280688423_3251833215138176_1852380812672183943_n.png"
-          alt="AVT-user"
-        />
-      </div>
+      <h2 class="yourCard">Your QR codes</h2>
 
-      <div class="in4-user">
-        <h1>ABOUT THEM</h1>
-        <form action="">
-          <div class="about-them123">
-            <p class="text about-them">Nickname</p>
-            <input class="input about-them" type="text" name="" id="" />
-          </div>
-          <div class="about-them123">
-            <p class="text about-them">DOB</p>
-            <input class="input about-them" type="text" name="" id="" />
-          </div>
-          <div class="about-them123">
-            <p class="text about-them">Cathphrase</p>
-            <input class="input about-them" type="text" name="" id="" />
-          </div>
-        </form>
+      <div class="tag" onclick="onReady()">
+        <img class="profile" src="./Assets/Group2.png" alt="profile" />
+        <h3>Card No.1</h3>
       </div>
-      <button class="CreatCard"><a href="#">Follow</a></button>
     </div>
+
+    <script src="./js/destop18.js"></script>
   </body>
 </html>
