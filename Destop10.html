@@ -42,6 +42,33 @@ button.btn.btn-info.btn-lg {
     PADDING: 11PX;
     cursor: pointer;
     MARGIN: 3PX;
+    background-color: #337ab7;
+    color: #fff;
+}
+ 
+/* css phan btn updateqr vs qr code model  */
+
+input#Linkmxh{
+  height: 42px;
+    width: 100%;
+    background-color: #ffa0a0;
+    border-radius: 5px;
+}
+.modal-content {
+    background-color: #88ceef;
+}
+input#Linkmxhqr {
+    height: 36px;
+    width: 70%;
+    background-color: #ffa0a0;
+    border-radius: 5px;
+}
+button#btn-qr {
+    color: #fff;
+    background-color: #337ab7;
+    WIDTH: 29%;
+    height: 35px;
+    border-radius: 5px;
 }
     </style>
     
@@ -164,7 +191,7 @@ button.btn.btn-info.btn-lg {
           required
         />
 <input type="hidden" id="index" >
-          <button onclick="QRCODE()">Generate QR Code</button>
+          <button id="btn-qr" onclick="QRCODE()">Generate QR Code</button>
       </div>
       <div class="qr-code">
           <img class="img-qr-code
