@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <nav class="nav">
+    <nav class="nav"> <a href="./index.html">
       <img
         src="./Assets/logo-Transparent.png"
         alt="logo"
@@ -26,6 +26,7 @@
         height="50px"
       />
       <span class="namecardTop">NAMECARD</span>
+    </a>
     </nav>
     <form action="">
     <div class="content-destop3">
@@ -77,7 +78,8 @@
         }
        if(data.email == email)
        {
-        alert("vn")
+        alert("Đổi passwoed thành công")
+        window.location.href="index.html"
        }
        if(password == repassword){
         let user = localStorage.getItem(email);

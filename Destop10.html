@@ -5,27 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your cards</title>
+    <!-- Link bootrap vs font  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/destop9.css" />
+
+    <link rel="stylesheet" href="./css/destop10.css" />
+    <script src="./js/desktop12.js"></script>
+
+    <!-- Đây là css nut button bootrap vs img qr code -->
+    <style>
+          img.img-qr-code {
+    width: 70%;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+button.btn.btn-info.btn-lg {
+    BACKGROUND-COLOR: #337ab7;
+}
+.btn:not(:disabled):not(.disabled) {
+    PADDING: 11PX;
+    cursor: pointer;
+    MARGIN: 3PX;
+}
+    </style>
+    
   </head>
 
-  <body>
+
+  <body onload="render()">
     <header>
-      <img
-        src="./Assets/Logo with text-trans.png"
-        alt="Logo"
-        width="auto"
-        height="50px"
-      />
+      <a href="./Destop6.html">
+        <img
+          src="./Assets/Logo with text-trans.png"
+          alt="Logo"
+          width="auto"
+          height="50px"
+        />
+      </a>
       <div class="topnav">
         <a href="./Destop9.html"
           ><img
@@ -58,24 +90,99 @@
         /></a>
       </div>
     </header>
+
+  
+    
     <div class="content">
+      <table id="render" onload="render() ">
       <h2 class="yourCard">Your cards</h2>
 
-      <div class="tag">
-        <img class="profile" src="./Assets/Group2.png" alt="profile" />
-        <h3>Card No.1</h3>
-        <div class="buttonContainer">
-          <button type="button"><a href="#">Update</a></button>
-          <button type="button"><a href="#">QR code</a></button>
-          <button type="button"><a href="#">Delete</a></button>
-        </div>
-      </div>
-
+     
+</table>
       <h2 class="createCard">
-        <a style="text-decoration: none" href="./Destop11.html"
+        <a  style="text-decoration: none" href="./Destop11.html"
           >Create new card <i class="fa-solid fa-circle-plus"></i
         ></a>
       </h2>
     </div>
+
+ <!-- Đây là bootrap nút UPDATE -->
+    
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <input 
+              id="Linkmxh"
+                type="url"
+                placeholder="Enter your Social Media link"
+                name="scLink"
+                required
+              />
+    <input type="hidden" id="index" >
+          </div>
+          <div class="modal-footer">
+            <button onclick="changemiu()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Đây là bootrap nút QR CODE -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         
+    <div class="wrapper">
+      <div class="header-qr">
+          <h1>QR Code Generator</h1>
+          <p>Paste a Url or Enter text to Crrate QR code</p>
+      </div>
+      <div class="form">
+        <input 
+        id="Linkmxhqr"
+          type="url"
+          placeholder="Enter your Social Media link"
+          name="scLink"
+          required
+        />
+<input type="hidden" id="index" >
+          <button onclick="QRCODE()">Generate QR Code</button>
+      </div>
+      <div class="qr-code">
+          <img class="img-qr-code
+          " src="./Assets/qr_code_PNG10.png" alt="qr-code">
+      </div>
+      <script src="./js/script.js"></script>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
   </body>
 </html>
+ <!-- Đây là LINK bootrap  -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
