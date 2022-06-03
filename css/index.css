@@ -99,6 +99,7 @@ b{
     border-radius: 4px;
     display: inline-block;
     border: #fff;
+    cursor: pointer;
 }
 .LoginBtn:hover{
     background-color: rgb(228, 61, 203);
