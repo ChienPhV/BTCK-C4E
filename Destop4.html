@@ -80,18 +80,18 @@
         if(data.password == newpassword)
        {
         alert("Mật khẩu mới trùng với mật khẩu cũ vui lòng kiểm tra lại !!!")
-        return false
        }
        else if(data.email == email)
        {
          alert("Đổi passwoed thành công")
          window.location.href="index.html"
        }
-       else if(password == repassword){
+        if(newpassword == repassword){
          let user = localStorage.getItem(email);
          user = user ? JSON.parse(user) : {};
-         user['password'] = password;
+         user['password'] = newpassword;
          localStorage.setItem(email, JSON.stringify(user));
+         return true
        }
 
     }
