@@ -4,33 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update your card</title>
-
+    <title>Your cards</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+
+    <script type="text/javascript" src="./js/qrcode.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/destop11.css" />
-    <link rel="stylesheet" href="./js/desktop12.js" />
-  </head>
-  <script src="./js/desktop12.js"></script>
-  <body >
+    <link rel="stylesheet" href="./css/destop9.css" />
     
+  </head>
+
+  <body>
     <header>
       <a href="./Destop6.html">
-      <img
-        src="./Assets/Logo with text-trans.png"
-        alt="Logo"
-        width="auto"
-        height="50px"
-      />
-    </a>
+        <img
+          src="./Assets/Logo with text-trans.png"
+          alt="Logo"
+          width="auto"
+          height="50px"
+        />
+      </a>
       <div class="topnav">
         <a href="./Destop9.html"
           ><img
@@ -54,7 +55,7 @@
             width="auto"
             height="30px"
         /></a>
-        <a href="./Destop18.html"
+        <a href="#"
           ><img
             src="./Assets/Icon/qr-icon.png"
             alt="qr-icon"
@@ -63,40 +64,23 @@
         /></a>
       </div>
     </header>
-
-    <h2>Update your card</h2>
-
-    <div id="content" class="logBox">
-      <div class="profile-pic-div">
-        <img src="./Assets/image.jpg" id="photo" />
-        <input type="file" id="file" />
-        <label for="file" id="uploadBtn">Choose Photo</label>
+    <div class="content">
+      <h2 class="yourCard">Your QR codes</h2>
+      <div class="tag">
+        <a href="./Destop19.html"><img class="profile" src="./Assets/Group2.png" alt="profile" /></a>
+        <a href="./Destop19.html" style="margin-left: 40%;">Card No.1</a>
       </div>
-
-      <textarea id="story" name="story" rows="5" cols="33">About you/Slogan/Quote</textarea>
-
-      <div id="scLink" class="link">
-        <input 
-        id="Linkmxhqr"
-          type="url"
-          placeholder="Enter your Social Media link"
-          name="scLink"
-          required
-        />
-        <input type="hidden" id="index" >
-        <div id="box">
-          <button id="btn">Add another Link <i class="fa-solid fa-circle-plus"></i> </button>
-        </div>
+      <div class="tag">
+        <a href="./Destop19.html"><img class="profile" src="./Assets/Group2.png" alt="profile" /></a>
+        <a href="./Destop19.html" style="margin-left: 40%;">Card No.2</a>
+      </div>
+      <div class="tag">
+        <a href="./Destop19.html"><img class="profile" src="./Assets/Group2.png" alt="profile" /></a>
+        <a href="./Destop19.html" style="margin-left: 40%;">Card No.3</a>
+      </div>
     </div>
-  
-    <button onclick="changemiu()" class="CreatCard">
-      <a href="./Destop10.html">Update card</a>
-    </button>
+    
 
-    <script src="./js/destop11.js"></script>
    
-<script>
- 
-</script>
   </body>
 </html>
