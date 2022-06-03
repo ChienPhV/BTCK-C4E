@@ -1,105 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Namecard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
 
-  <body>
-    <div class="Destop">
-      <div class="logo">
-        <img
-          src="./Assets/Logo with text-trans.png"
-          alt="logo"
-          width="366px"
-          height="270px"
-        />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Namecard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
 
-      <div class="logBox">
-        <h2>LOG IN</h2>
-        <form action="" onsubmit="login()" method="post">
-          <div for="email"><b>Email</b></div>
-          <input
-            id="email"
-            type="text"
-            placeholder="Enter Email"
-            name="email"
-            required
-          />
-          <div for="psw"><b>Password</b></div>
-          <input
-            id="password"
-            type="password"
-            placeholder="Enter Password"
-            name="password"
-            required
-          />
-          <input type="checkbox" value="lsRememberMe" id="rememberMe" />
-          <label for="rememberMe">Remember me</label>
+<body>
+  <script scr="./js/jquery.min.js"></script>
+  <script src="./js/login-logout-fb.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
-          <p><a href="./Destop3.html">Forgot password?</a></p>
-          <div class="clearfix">
-            <button
-              type="submit"
-              class="LoginBtn"
-              value="Login"
-              onclick="lsRememberMe()"
-            >
-              Log In
-            </button>
-            <button class="signupBtn">
-              <a href="./Destop2.html">Sign Up</a>
-            </button>
-          </div>
-        </form>
-      </div>
-      <div class="social-media">
-        <a href="#" class="social-media-btn one"
-          ><ion-icon name="logo-facebook"></ion-icon
-        ></a>
-        <a href="#" class="social-media-btn two"
-          ><ion-icon name="logo-twitter"></ion-icon
-        ></a>
-        <a href="#" class="social-media-btn thr"
-          ><ion-icon name="logo-google"></ion-icon
-        ></a>
-        <ion-icon size="large"></ion-icon>
-      </div>
+  <div class="Destop">
+    <div class="logo">
+      <img src="./Assets/Logo with text-trans.png" alt="logo" width="366px" height="270px" />
     </div>
-    <script>
-      function login(e) {
-        event.preventDefault();
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
-        var user = localStorage.getItem(email);
-        var data = JSON.parse(user);
-        if (user == null) {
-          alert("vui long nhap email password hoac ban da nhap sai");
-        } else if (email == data.email && password == data.password) {
-          alert("dang nhap thanh cong");
-          window.location.href = "Destop5.html";
-        } else {
-          alert("dang nhap that bai");
-        }
+
+    <div class="logBox">
+      <h2>LOG IN</h2>
+      <form action="" onsubmit="login()" method="post">
+        <div for="email"><b>Email</b></div>
+        <input id="email" type="text" placeholder="Enter Email" name="email" required />
+        <div for="psw"><b>Password</b></div>
+        <input id="password" type="password" placeholder="Enter Password" name="password" required />
+        <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+        <label for="rememberMe">Remember me</label>
+
+        <p><a href="./Destop3.html">Forgot password?</a></p>
+        <div class="clearfix">
+          <button type="submit" class="LoginBtn" value="Login" onclick="lsRememberMe()">
+            Log In
+          </button>
+          <button class="signupBtn">
+            <a href="./Destop2.html">Sign Up</a>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="social-media">
+      <a href="./index-1.html" class="social-media-btn one">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+      <a href="#" class="social-media-btn two">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+      <a href="#" class="social-media-btn thr">
+        <ion-icon name="logo-google"></ion-icon>
+      </a>
+      <ion-icon size="large"></ion-icon>
+    </div>
+  </div>
+
+  <script>
+    function login(e) {
+      event.preventDefault();
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var user = localStorage.getItem(email);
+      var data = JSON.parse(user);
+      if (user == null) {
+        alert("vui long nhap email password hoac ban da nhap sai");
+      } else if (email == data.email && password == data.password) {
+        alert("dang nhap thanh cong");
+        window.location.href = "Destop5.html";
+      } else {
+        alert("dang nhap that bai");
       }
-    </script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+    }
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
