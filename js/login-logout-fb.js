@@ -41,8 +41,8 @@ window.fbAsyncInit = function () {
     FB.api('/me?fields=name,email,birthday,location', function (response) {
       if (response && !response.error) {
         //console.log(response);
-        // buildProfile(response);
-        window.location.href = "Destop5.html";
+        buildProfile(response);
+        // window.location.href = "Destop5.html";
       }
      
 
