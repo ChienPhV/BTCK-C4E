@@ -23,11 +23,11 @@ window.fbAsyncInit = function () {
   function statusChangeCallback(response) {
     if (response.status === 'connected') {
       console.log('Logged in and authenticated');
-      // setElements(true);
+      setElements(true);
       testAPI();
     } else {
       console.log('Not authenticated');
-      // setElements(false);
+      setElements(false);
     }
   }
 
@@ -46,66 +46,66 @@ window.fbAsyncInit = function () {
       }
      
 
-      // FB.api('/me/feed', function (response) {
-      //   if (response && !response.error) {
-      //     buildFeed(response);
-      //   }
-      // });
+      FB.api('/me/feed', function (response) {
+        if (response && !response.error) {
+          buildFeed(response);
+        }
+      });
     })
   }
 
-  // function buildProfile(user) {
-  //   let profile = `
-  //       <h3>${user.name}</h3>
-  //       <ul class="list-group">
+  function buildProfile(user) {
+    let profile = `
+        <h3>${user.name}</h3>
+        <ul class="list-group">
           
-  //           <li class="list-group-item">Email: ${user.email}</li>
-  //           <li class="list-group-item">User ID: ${user.id}</li>
-  //           <li class="list-group-item">Birthday: ${user.birthday}</li>
-  //           <li class="list-group-item">User ID: ${user.location.name}</li>
+            <li class="list-group-item">Email: ${user.email}</li>
+            <li class="list-group-item">User ID: ${user.id}</li>
+            <li class="list-group-item">Birthday: ${user.birthday}</li>
+            <li class="list-group-item">User ID: ${user.location.name}</li>
           
-  //       </ul>
-  //     `;
+        </ul>
+      `;
     
 
-  //   document.getElementById('profile').innerHTML = profile;
-  // }
+    document.getElementById('profile').innerHTML = profile;
+  }
 
-  // function buildFeed(feed) {
-  //   let output = '<h3>Latest Posts</h3>';
-  //   for (let i in feed.data) {
-  //     if (feed.data[i].message) {
-  //       output += `
-  //           <div class="well">
-  //             ${feed.data[i].message} <span>${feed.data[i].created_time}</span>
-  //           </div>
-  //         `;
-  //     }
-  //   }
+  function buildFeed(feed) {
+    let output = '<h3>Latest Posts</h3>';
+    for (let i in feed.data) {
+      if (feed.data[i].message) {
+        output += `
+            <div class="well">
+              ${feed.data[i].message} <span>${feed.data[i].created_time}</span>
+            </div>
+          `;
+      }
+    }
 
-  //   document.getElementById('feed').innerHTML = output;
-  // }
+    document.getElementById('feed').innerHTML = output;
+  }
 
-  // function setElements(isLoggedIn) {
-  //   if (isLoggedIn) {
-  //     document.getElementById('logout').style.display = 'none';
-  //     document.getElementById('profile').style.display = 'none';
-  //     document.getElementById('feed').style.display = 'none';
-  //     document.getElementById('fb-btn').style.display = 'none';
-  //     document.getElementById('heading').style.display = 'none';
+  function setElements(isLoggedIn) {
+    if (isLoggedIn) {
+      document.getElementById('logout').style.display = 'none';
+      document.getElementById('profile').style.display = 'none';
+      document.getElementById('feed').style.display = 'none';
+      document.getElementById('fb-btn').style.display = 'none';
+      document.getElementById('heading').style.display = 'none';
             
-  //   } else {
-  //     document.getElementById('logout').style.display = 'none';
-  //     document.getElementById('profile').style.display = 'none';
-  //     document.getElementById('feed').style.display = 'none';
-  //     document.getElementById('fb-btn').style.display = 'block';
-  //     document.getElementById('heading').style.display = 'block';
+    } else {
+      document.getElementById('logout').style.display = 'none';
+      document.getElementById('profile').style.display = 'none';
+      document.getElementById('feed').style.display = 'none';
+      document.getElementById('fb-btn').style.display = 'block';
+      document.getElementById('heading').style.display = 'block';
            
-  //   }
-  // }
+    }
+  }
 
-  // function logout() {
-  //   FB.logout(function (response) {
-  //     setElements(false);
-  //   });
-  // }
+  function logout() {
+    FB.logout(function (response) {
+      setElements(false);
+    });
+  }
