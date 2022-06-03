@@ -63,13 +63,13 @@
     <div class="content">
       <h2 class="yourCard">Your cards</h2>
 
-      <div class="tag">
+      <div id="card" class="tag">
         <img class="profile" src="./Assets/Group2.png" alt="profile" />
         <h3>Card No.1</h3>
-        <div class="buttonContainer">
-          <button type="button"><a href="#">Update</a></button>
-          <button type="button"><a href="#">QR code</a></button>
-          <button type="button"><a href="#">Delete</a></button>
+        <div  class="buttonContainer">
+          <button type="button"><a href="./Destop12.html">Update</a></button>
+          <button type="button"><a href="./Destop19.html">QR code</a></button>
+          <button type="button" onclick="myFunction()"><a href="#">Delete</a></button>
         </div>
       </div>
 
@@ -79,5 +79,13 @@
         ></a>
       </h2>
     </div>
+
+    <!-- delete card: -->
+    <script>
+      function myFunction() {
+        const element = document.getElementById("card");
+        element.remove();
+      }
+      </script>
   </body>
 </html>
