@@ -187,3 +187,12 @@ input[type=text] {
     background-color: rgb(207, 143, 212);
     color: rgb(34, 7, 104);
 }
+#nick, #dob, #catch {
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    line-height: 21px;
+    color: #02121a;
+    line-height: 20px;
+    margin-left: 30%;
+}
