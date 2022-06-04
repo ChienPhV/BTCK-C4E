@@ -39,5 +39,18 @@ file.addEventListener('change', function(){
     }
 });
 
+function save() {
+    if (nicknameInput.value && DOBInput.value && catchphraseInput.value !== "") {
+      localStorage.nickname = nicknameInput.value;
+      localStorage.DOB = DOBInput.value;
+      localStorage.catchphrase = catchphraseInput.value;
+      
+    } else {
+        localStorage.nickname = "";
+        localStorage.DOB = "";
+        localStorage.catchphrase = "";
+      
+    }
+  }
 
 

@@ -13,7 +13,7 @@ function render(){
 
     <button  onclick="editemiu(${index})" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Update</button>
     <button  onclick="editqrcode(${index})"type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-QRCODE
+QR Code
 </button>
       <button onclick="deleteiuem(${index})"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
   Delete
