@@ -38,19 +38,22 @@ file.addEventListener('change', function(){
 
     }
 });
-
-function save() {
-    if (nicknameInput.value && DOBInput.value && catchphraseInput.value !== "") {
-      localStorage.nickname = nicknameInput.value;
-      localStorage.DOB = DOBInput.value;
-      localStorage.catchphrase = catchphraseInput.value;
+save();
+function save(e) {
+    event.preventDefault()
+    if (document.getElementById("nickname").value && document.getElementById("DOB").value && document.getElementById("catchphrase").value !=="") {
+      localStorage.nickname = document.getElementById("nickname").value
+      localStorage.DOB = document.getElementById("DOB").value ;
+      localStorage.catchphrase = document.getElementById("catchphrase").value ;
       
     } else {
         localStorage.nickname = "";
         localStorage.DOB = "";
-        localStorage.catchphrase = "";
-      
+        localStorage.catchphrase = "";    
     }
+   
+    document.getElementById("x").textContent="Saved";
+
   }
 
 

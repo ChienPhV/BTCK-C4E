@@ -35,27 +35,26 @@
       <label for="file" id="uploadBtn">Choose Photo</label>
     </div>
 
-    <div class="logBox">
-      <h2>ABOUT YOU</h2>
-      <form action="">
+    <form action="" onsubmit="save()" method="post">
+      <div class="logBox">
+        <h2>ABOUT YOU</h2>
+
         <div class="info" for="nickname"><b>Nickname</b></div>
         <input id="nickname" type="text" placeholder="Enter your nickname" name="nickname" required />
         <div class="info" for="DOB"><b>DOB</b></div>
         <input id="DOB" type="text" placeholder="Enter your DOB" name="DOB" required />
         <div class="info" for="catchphrase"><b>Catchphrase</b></div>
         <input id="catchphrase" type="text" placeholder="Enter your catchphrase" name="catchphrase" required />
-      </form>
-    </div>
 
-    <button class="save" onclick="save ()">
-      Save
-    </button>
 
-    <button class="change">
-      <a href="./Destop7.html">Change password</a>
-    </button>
-
+      </div>
+      <button id="x" name="btnsave" type="submit" class="save-btn">Save</button>
+      <button class="change">
+        <a href="./Destop7.html" style="color: #fff;">Change password</a>
+      </button>
+    </form>
   </div>
+
   <script src="./js/destop6.js"></script>
 </body>
 
