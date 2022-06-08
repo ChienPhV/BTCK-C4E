@@ -1,78 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>QR Code Scanner or Reader | CodingNepal</title>
-    <link rel="stylesheet" href="./css/destop15.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <a href="./Destop6.html">
-        <img
-          src="./Assets/Logo with text-trans.png"
-          alt="Logo"
-          width="auto"
-          height="50px"
-        />
+
+<head>
+  <meta charset="utf-8" />
+  <title>QR Code Scanner or Reader | CodingNepal</title>
+  <link rel="stylesheet" href="./css/destop15.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+</head>
+
+<body>
+
+
+  <header>
+    <a href="./Destop6.html">
+      <img src="./Assets/Logo with text-trans.png" alt="Logo" width="auto" height="50px" />
+    </a>
+    <div class="topnav">
+      <a href="./Destop9.html"><img src="./Assets/Icon/notice-icon.png" alt="notice-icon" width="auto" height="30px" />
       </a>
-      <div class="topnav">
-        <a href="./Destop9.html"
-          ><img
-            src="./Assets/Icon/notice-icon.png"
-            alt="notice-icon"
-            width="auto"
-            height="30px"
-          />
-        </a>
-        <a href="./Destop10.html"
-          ><img
-            src="./Assets/Icon/card-icon.png"
-            alt="card-icon"
-            width="auto"
-            height="30px"
-        /></a>
-        <a href="#"
-          ><img
-            src="./Assets/Icon/scan-icon.png"
-            alt="scan-icon"
-            width="auto"
-            height="30px"
-        /></a>
-        <!-- <a href="./Destop18.html"
-          ><img
-            src="./Assets/Icon/qr-icon.png"
-            alt="qr-icon"
-            width="auto"
-            height="30px"
-        /></a> -->
-      </div>
-    </header>
-
-    <div class="scannerContainer">
-      <div class="wrapper">
-        <form>
-          <input type="file" hidden />
-          <img alt="qr-code" />
-          <div class="content">
-            <i class="fas fa-cloud-upload"></i>
-            <p>Upload QR Code to Read</p>
-          </div>
-        </form>
-        <div class="details">
-          <textarea spellcheck="false" disabled></textarea>
-          <div class="buttons">
-            <button class="close">Close</button>
-            <button class="redirect">Let's go!</button>
-          </div>
-        </div>
-      </div>
+      <a href="./Destop10.html"><img src="./Assets/Icon/card-icon.png" alt="card-icon" width="auto" height="30px" /></a>
+      <a href="#"><img src="./Assets/Icon/scan-icon.png" alt="scan-icon" width="auto" height="30px" /></a>
+      <a href="./Destop18.html"><img src="./Assets/Icon/qr-icon.png" alt="qr-icon" width="auto" height="30px" /></a>
     </div>
+  </header>
 
-    <script src="./js/destop15.js"></script>
-  </body>
+  <div id="scannerContainer">
+    <div id="qr-reader" style="width: 600px"></div>
+  </div>
+
+  <script src="./js/html5-qrcode.min.js"></script>
+  <!-- <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script> -->
+  <script>
+    function onScanSuccess(decodedText, decodedResult) {
+      console.log(`Code scanned = ${decodedText}`, decodedResult);
+    }
+    var html5QrcodeScanner = new Html5QrcodeScanner(
+      "qr-reader", { fps: 10, qrbox: 250 });
+    html5QrcodeScanner.render(onScanSuccess);
+
+  </script>
+
+</body>
+
 </html>
